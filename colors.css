@@ -1,0 +1,34 @@
+/* Centro Médico ABC — color tokens. Brandfetch 2026-08-15. */
+:root {
+  --lochmara: #0077c8;
+  --lochmara-rgb: 0, 119, 200;
+  --cod-gray: #161616;
+  --cod-gray-rgb: 22, 22, 22;
+  --flesh: #fecda5;
+  --flesh-rgb: 254, 205, 165;
+
+  --soft: #fff7ef;
+  --soft-2: #f3e6d6;
+  --line: #ead9c6;
+  --muted: #5c5c5c;
+  --white: #ffffff;
+  --logo-fill: #0275c8;
+
+  --text-body: var(--cod-gray);
+  --text-muted: var(--muted);
+  --text-heading: var(--cod-gray);
+  --text-inverse: var(--white);
+  --surface-page: var(--white);
+  --surface-soft: var(--soft);
+  --surface-card: var(--white);
+  --surface-brand: var(--lochmara);
+  --border-line: var(--line);
+  --color-primary: var(--lochmara);
+  --color-secondary: var(--flesh);
+  --color-accent: var(--flesh);
+  --accent: var(--flesh);
+  --focus-ring: #4da3e0;
+  --positive: #0f7a4b;
+  --warning: #b45309;
+  --critical: #b42318;
+}

@@ -1,0 +1,18 @@
+{
+  "namespace": "CentroMedicoABCDesignSystem",
+  "source": "brandfetch+site",
+  "globalCssPaths": [
+    "tokens/colors.css",
+    "tokens/typography.css",
+    "tokens/layout.css",
+    "tokens/brand.css",
+    "styles.css"
+  ],
+  "startingPoints": [
+    {
+      "name": "Specimen",
+      "path": "index.html",
+      "kind": "page"
+    }
+  ]
+}

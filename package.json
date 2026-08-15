@@ -1,0 +1,18 @@
+{
+  "name": "centro-medico-abc-design-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Centro Médico ABC design system — tokens, logos, guidelines, and UI kit.",
+  "license": "MIT",
+  "homepage": "https://centromedicoabc.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-ORG/centro-medico-abc-design-system.git"
+  },
+  "keywords": [
+    "centro-medico-abc",
+    "design-system",
+    "design-tokens",
+    "healthcare"
+  ]
+}

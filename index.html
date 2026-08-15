@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centro Médico ABC Design System</title>
+  <link rel="icon" href="assets/logos/abc-favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero { padding: clamp(3rem,8vw,6rem) 0 3.5rem; border-bottom: 1px solid var(--line);
+      background: radial-gradient(900px 320px at 88% -8%, rgba(254,205,165,.55), transparent 60%), #fff; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:2.5rem; align-items:end; }
+    .swatch-row { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .swatch { min-height:180px; border-radius:18px; padding:1.1rem 1.15rem; display:flex; flex-direction:column; justify-content:flex-end; }
+    .swatch b { font-family:var(--font-display); font-size:1.15rem; }
+    .swatch span { font-size:.86rem; opacity:.9; margin-top:.25rem; }
+    .swatch code { font-family:var(--font-mono); font-size:.72rem; margin-top:.55rem; opacity:.85; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    .logo-cell { border:1px solid var(--line); border-radius:16px; min-height:150px; display:grid; place-items:center; padding:1.2rem; }
+    table { width:100%; border-collapse:collapse; font-size:.95rem; }
+    th, td { text-align:left; padding:.7rem .55rem; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; color:var(--flesh); }
+    .chip { width:18px; height:18px; border-radius:4px; display:inline-block; vertical-align:middle; margin-right:.4rem; border:1px solid rgba(0,0,0,.08); }
+    @media (max-width:860px) { .hero-grid,.swatch-row,.grid-2,.grid-3 { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header class="ds-topbar">
+    <a class="ds-brand" href="#inicio"><img src="assets/logos/abc-logo-blue.svg" alt="Centro Médico ABC"></a>
+    <nav aria-label="Sistema">
+      <a href="#colores">Colores</a>
+      <a href="#tipo">Tipografía</a>
+      <a href="#logo">Logo</a>
+      <a href="#componentes">Componentes</a>
+      <a href="ui_kits/website/index.html">UI kit</a>
+      <a href="docs/DESIGN.md">Diseño</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="ds-shell hero-grid">
+      <div>
+        <p class="ds-kicker">Design system · v1.0</p>
+        <h1 class="ds-display">La vida nos une.</h1>
+        <p class="ds-lead">Tokens, lockups y componentes para productos digitales del Centro Médico ABC. Paleta y fuentes de Brandfetch; marcas del sitio oficial.</p>
+        <div class="ds-actions">
+          <a class="ds-btn ds-btn--primary" href="#colores">Ver tokens</a>
+          <a class="ds-btn ds-btn--outline" href="docs/DESIGN.md">System design</a>
+        </div>
+      </div>
+      <aside class="ds-metric">
+        <p class="ds-kicker">Campus</p>
+        <strong>2</strong>
+        <p>Observatorio · Santa Fe · JCI · Magnet · ConsultABC</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="ds-section" id="colores">
+    <div class="ds-shell">
+      <p class="ds-kicker">Color</p>
+      <h2 class="ds-h2">Brandfetch, sin aproximaciones</h2>
+      <p class="ds-lead">Tres colores de marca. Flesh es acento cálido, no texto. El fill del favicon #0275C8 se trata como variante de Lochmara, no como un cuarto color.</p>
+      <div class="swatch-row" style="margin-top:1.75rem">
+        <div class="swatch" style="background:#0077C8;color:#fff">
+          <b>Lochmara</b>
+          <span>Primario</span>
+          <code>#0077C8 · RGB 0, 119, 200 · HSL 204, 100, 39 · CMYK 100, 40, 0, 22</code>
+        </div>
+        <div class="swatch" style="background:#161616;color:#fff">
+          <b>Cod Gray</b>
+          <span>Tinta</span>
+          <code>#161616 · RGB 22, 22, 22 · HSL 0, 0, 9 · CMYK 0, 0, 0, 91</code>
+        </div>
+        <div class="swatch" style="background:#FECDA5;color:#161616">
+          <b>Flesh</b>
+          <span>Acento cálido</span>
+          <code>#FECDA5 · RGB 254, 205, 165 · HSL 27, 98, 82 · CMYK 0, 19, 35, 0</code>
+        </div>
+      </div>
+      <div style="overflow:auto;margin-top:2rem">
+        <table>
+          <thead><tr><th>Token</th><th>Hex</th><th>Uso</th></tr></thead>
+          <tbody>
+            <tr><td><span class='chip' style='background:#0077C8'></span>--lochmara</td><td>#0077C8</td><td>Marca, vínculos, CTA primario</td></tr>
+<tr><td><span class='chip' style='background:#161616'></span>--cod-gray</td><td>#161616</td><td>Texto, wordmark oscuro, chrome</td></tr>
+<tr><td><span class='chip' style='background:#FECDA5'></span>--flesh</td><td>#FECDA5</td><td>Tintes y superficies. Nunca texto de cuerpo sobre blanco.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section ds-section--soft" id="tipo">
+    <div class="ds-shell grid-2">
+      <div>
+        <p class="ds-kicker">Titulares</p>
+        <h2 class="ds-display" style="font-size:clamp(2rem,4vw,3.1rem)">Myriad Pro</h2>
+        <p class="ds-lead">Brandfetch lista Myriad-Pro para titulares. Stand-in: Source Sans 3 hasta integrar el archivo licenciado.</p>
+      </div>
+      <div>
+        <p class="ds-kicker">Cuerpo</p>
+        <h3 class="ds-h2" style="font-family:var(--font-body);font-weight:600;letter-spacing:0">-apple-system</h3>
+        <p class="ds-lead">Brandfetch lista el stack de sistema (-apple-system) para cuerpo. 17px / 1.55.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section" id="logo">
+    <div class="ds-shell">
+      <p class="ds-kicker">Identidad</p>
+      <h2 class="ds-h2">Figura humana + ABC</h2>
+      <div class="grid-3" style="margin-top:1.6rem">
+        <div class="logo-cell" style="background:#fff"><img src="assets/logos/abc-favicon.svg" alt="Símbolo ABC" style="width:min(280px,90%)"></div>
+<div class="logo-cell" style="background:#fff"><img src="assets/logos/abc-logo-blue.svg" alt="Logo azul" style="width:min(280px,90%)"></div>
+<div class="logo-cell" style="background:#0077C8"><img src="assets/logos/abc-logo-white.svg" alt="Logo inverso" style="width:min(280px,90%)"></div>
+      </div>
+      <p class="ds-caption" style="margin-top:1rem">No recolorear el símbolo a Flesh. El fill oficial del favicon es #0275C8, vecino de Lochmara.</p>
+    </div>
+  </section>
+
+  <section class="ds-section ds-section--soft" id="componentes">
+    <div class="ds-shell">
+      <p class="ds-kicker">Componentes</p>
+      <h2 class="ds-h2">Acciones y servicios</h2>
+      <div class="ds-actions">
+        <a class="ds-btn ds-btn--primary" href="#">Encuentra a tu médico</a>
+        <a class="ds-btn ds-btn--outline" href="#">Agendar cita</a>
+        <a class="ds-btn ds-btn--accent" href="#">Check up</a>
+        <a class="ds-btn ds-btn--urgent" href="https://web.whatsapp.com/send?phone=525552308000">WhatsApp 55 5230 8000</a>
+      </div>
+      <div class="grid-3" style="margin-top:1.6rem">
+        
+        <article class="ds-card"><span class="ds-badge ds-badge--primary">Servicio</span><h3 class="ds-h3" style="margin-top:.8rem">ConsultABC</h3><p>Consultas sin cita, lunes a domingo, 8:00 a 20:00 h. Campus Observatorio y Santa Fe.</p></article>
+        <article class="ds-card"><span class="ds-badge ds-badge--accent">Laboratorio</span><h3 class="ds-h3" style="margin-top:.8rem">Estudios y resultados</h3><p>Diagnóstico con acreditación internacional. Resultados en línea.</p></article>
+        <article class="ds-metric"><p class="ds-kicker">Observatorio</p><strong style="font-size:1.5rem">55 5230 8000</strong><p>Santa Fe 55 1103 1600</p></article>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="ds-footer">
+    <div class="ds-shell ds-footer-grid">
+      <div>
+        <p>La vida nos une.</p>
+        <p class="ds-caption">Marca © Centro Médico ABC / American British Cowdray Medical Center. Código MIT. Ver NOTICE.md.</p>
+      </div>
+      <div>
+        <h3 class="ds-h3">En este repo</h3>
+        <p>
+          <a href="tokens/colors.css">tokens/colors.css</a><br>
+          <a href="ui_kits/website/index.html">ui_kits/website</a><br>
+          <a href="docs/DESIGN.md">docs/DESIGN.md</a>
+        </p>
+      </div>
+      <div>
+        <h3 class="ds-h3">Fuentes</h3>
+        <p>
+          <a href="https://brandfetch.com/centromedicoabc.com">Brandfetch</a><br>
+          <a href="https://centromedicoabc.com">centromedicoabc.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

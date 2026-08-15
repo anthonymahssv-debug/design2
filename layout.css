@@ -1,0 +1,13 @@
+:root {
+  --max: 1200px;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+  --section-y: clamp(4.5rem, 8vw, 7.5rem);
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-card: 18px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration: 220ms;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
