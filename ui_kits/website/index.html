@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centro Médico ABC · UI kit</title>
+  <link rel="icon" href="../../assets/logos/abc-favicon.svg">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center; padding:clamp(3rem,7vw,5.5rem) 0; }
+    .hero-visual { border-radius:22px; min-height:260px; background:#0077C8; box-shadow:var(--shadow-hover); overflow:hidden; }
+    .hero-visual img { width:100%; height:100%; object-fit:cover; }
+    .quick { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+    @media (max-width:860px) { .hero,.quick { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header class="ds-topbar">
+    <a class="ds-brand" href="#inicio"><img src="../../assets/logos/abc-logo-blue.svg" alt="Centro Médico ABC"></a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#campus">Campus</a>
+      <a class="ds-btn ds-btn--urgent ds-btn--small" href="https://web.whatsapp.com/send?phone=525552308000">WhatsApp 55 5230 8000</a>
+    </nav>
+  </header>
+  <main class="ds-shell">
+    <section class="hero" id="inicio">
+      <div>
+        <p class="ds-kicker">Más que un hospital</p>
+        <h1 class="ds-display">Estamos contigo en cada momento.</h1>
+        <p class="ds-lead">Orientación al paciente y servicios hospitalarios al nivel de los mejores del mundo. La vida nos une.</p>
+        <div class="ds-actions">
+          <a class="ds-btn ds-btn--primary" href="#">Encuentra a tu médico</a>
+          <a class="ds-btn ds-btn--outline" href="#">Agendar cita</a>
+        </div>
+      </div>
+      <div class="hero-visual"><img src="../../assets/banners/abc-hero.webp" alt="Campus Centro Médico ABC"></div>
+    </section>
+    <section class="quick" id="servicios">
+      <article class="ds-card"><p class="ds-kicker">Cáncer</p><h3 class="ds-h3">Radioterapia Ethos</h3><p>Único centro en Latinoamérica con radioterapia adaptativa guiada por IA.</p></article>
+      <article class="ds-card"><p class="ds-kicker">Prevención</p><h3 class="ds-h3">Check ups</h3><p>Masculino, femenino y empresarial según etapa de vida.</p></article>
+      <article class="ds-card"><p class="ds-kicker">Consulta</p><h3 class="ds-h3">ConsultABC</h3><p>$900 MXN. Sin cita previa. 8:00 a 20:00 h.</p></article>
+        </section>
+    <section class="ds-section" id="campus">
+      <p class="ds-kicker">Presencia</p>
+      <h2 class="ds-h2">Observatorio y Santa Fe</h2>
+      <p class="ds-lead">Sur 136 No. 116, Las Américas — (55) 5230 8000. Av. Carlos Graef Fernández 154, Santa Fe — (55) 1103 1600.</p>
+    </section>
+  </main>
+  <footer class="ds-footer">
+    <div class="ds-shell ds-footer-grid">
+      <div>
+        <h3 class="ds-h3">Centro Médico ABC</h3>
+        <p>La vida nos une.</p>
+      </div>
+      <div>
+        <h3 class="ds-h3">Contacto</h3>
+        <p>Observatorio 55 5230 8000<br>Santa Fe 55 1103 1600</p>
+      </div>
+      <div>
+        <h3 class="ds-h3">Kit</h3>
+        <p><a href="../../index.html">Volver al design system</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
