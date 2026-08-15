@@ -17,4 +17,4 @@ This repository packages those assets so official product surfaces can stay on-b
 
 ## Typefaces
 
-Myriad Pro is an Adobe-licensed face. Until the licensed files live in `assets/fonts/`, Source Sans 3 is the documented stand-in. Body uses the system UI stack Brandfetch lists as `-apple-system`.
+Myriad Pro (Brandfetch) and Theinhardt (live site) are licensed faces and are not shipped. The stack is `local("Myriad Pro")` / `local("Theinhardt")`, then self-hosted **Source Sans 3 VF** (Adobe, SIL OFL) in `assets/fonts/`. Body stays `-apple-system`.

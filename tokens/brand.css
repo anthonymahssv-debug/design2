@@ -43,6 +43,8 @@ a:hover { color: var(--flesh); }
   font-weight: var(--weight-display);
   letter-spacing: var(--tracking-display);
   line-height: var(--leading-display);
+  font-optical-sizing: auto;
+  font-feature-settings: "kern" 1, "liga" 1;
   color: var(--text-heading);
   margin: 0;
 }
